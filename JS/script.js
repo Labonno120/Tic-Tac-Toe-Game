@@ -5,7 +5,7 @@ let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
 let turno = true; // O starts
-let userName = prompt("Enter your name:");
+let user= prompt("Hi, Sangeeta, Enter any Emoji or text you like just bellow this text:");
 
 const winPatterns = [
     [0,1,2],
@@ -30,7 +30,7 @@ boxes.forEach((box, index) => {
 
         // Player move (O)
         if (turno && box.innerText === "") {
-            box.innerText = userName;
+            box.innerText = user;
             box.disabled = true;
             turno = false;
         }
@@ -40,7 +40,7 @@ boxes.forEach((box, index) => {
             if (!turno) {
                 for (let b of boxes) {
                     if (b.innerText === "") {
-                        b.innerText = "Bristy";   // <-- FIXED
+                        b.innerText = "\uD83C\uDF82";   // <-- FIXED
                         b.disabled = true;
                         turno = true;
                         break;
@@ -63,9 +63,19 @@ const disableBtns = () => {
 };
 
 const showWinner = (winner) => {
-    msg.innerText = `Congratulations, Winner is ${winner}`;
+    if(winner == user){
+    msg.innerText = `Congratulations! 🎉
+        You got the cake, now it's time to celebrate!
+        Happy Birthday to Sangeeta ❤️`;
     msgContainer.classList.remove("hide");
+    document.querySelector("#celebration").classList.remove("hide");
     disableBtns();
+    }
+    else{
+        msg.innerText = `Try Again, You can win!`;
+        msgContainer.classList.remove("hide");
+    disableBtns();
+    }
 };
 
 const checkWinner = () => {
