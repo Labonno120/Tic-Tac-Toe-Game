@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe Game</title>
+    <title>Sangeeta's Birthday Tic-Tac-Toe 🎂</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class="msg-container hide">
-            <p id = "msg">Winner</p>
-            <button id="new">New Game!</button>
+
+    <!-- Custom Prompt -->
+    <div id="customPrompt" class="prompt-container hide">
+        <div class="prompt-box">
+            <h3>Hi, Sangeeta 👋</h3>
+            <p>Enter any emoji you like:</p>
+            <input type="text" id="promptInput" placeholder="e.g., 🎉 🎂 ❤️">
+            <button id="promptOk">OK</button>
         </div>
-        <div id="celebration" class="hide">
-            <img src="JS/birthday.gif" class="celebration-img" alt="celebration">
-        </div>
-        <div id ="game-area">
-        <h1>Tic-Tac-Toe Game</h1>
-        <h1>If you win the game, the cake is yours!</h1>
+    </div>
+
+    <!-- Winner Message -->
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <button id="new">New Game!</button>
+    </div>
+
+    <!-- Celebration GIF -->
+    <div id="celebration" class="hide">
+        <img src="JS/birthday.gif" class="celebration-img" alt="celebration">
+    </div>
+
+    <!-- Game Area -->
+    <main id="game-area">
+        <h1 class="title">🎂 Birthday Tic-Tac-Toe 🎂</h1>
+        <h2 class="subtitle">Win & get your cake, Sangeeta! 🍰</h2>
+
         <div class="container">
-        <div class="game">
-            <button class="box" id ="box1"></button>
-            <button class="box" id ="box2"></button>
-            <button class="box" id ="box3"></button>
-            <button class="box" id ="box4"></button>
-            <button class="box" id ="box5"></button>
-            <button class="box" id ="box6"></button>
-            <button class="box" id ="box7"></button>
-            <button class="box" id ="box8"></button>
-            <button class="box" id ="box9"></button>
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
         </div>
-        </div>
-        
+
         <button id="reset">Reset Game!</button>
-        </div>
-       
     </main>
+
     <script src="JS/script.js" defer></script>
-</body>
 
 </html>
