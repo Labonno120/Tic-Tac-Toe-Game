@@ -34,7 +34,7 @@ gap:0.5vmin;
     border-radius: 1rem;
     border:none;
     box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-    font-size: 4vmin;
+    font-size: 10vmin;
     color:#b0413e;
     background-color: #ddc2c2;
     font-weight: 400;
@@ -71,6 +71,9 @@ gap:0.5vmin;
     gap:2em;
 }
 .hide{
+    display:none;
+}
+.hide1{
     display:none;
 }
 #celebration {

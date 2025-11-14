@@ -2,11 +2,12 @@ let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset");
 let newGameButton = document.querySelector("#new");
 let msgContainer = document.querySelector(".msg-container");
+let external = document.querySelector(".hide1");
 let msg = document.querySelector("#msg");
 
 let turno = true; // O starts
 let user= prompt("Hi, Sangeeta, Enter any Emoji or text you like just bellow this text:");
-
+//external.classList.remove("hide1");
 const winPatterns = [
     [0,1,2],
     [0,3,6],
@@ -23,6 +24,8 @@ const resetGame = () => {
     enableBtns();
     boxes.forEach(b => b.innerText = "");
     msgContainer.classList.add("hide");
+    document.getElementById("game-area").classList.remove("hide1");
+    document.querySelector("#celebration").classList.add("hide");
 };
 
 boxes.forEach((box, index) => {
@@ -68,12 +71,15 @@ const showWinner = (winner) => {
         You got the cake, now it's time to celebrate!
         Happy Birthday to Sangeeta ❤️`;
     msgContainer.classList.remove("hide");
+    //msgContainer.classList.add("hide1");
+    document.getElementById("game-area").classList.add("hide1");
     document.querySelector("#celebration").classList.remove("hide");
     disableBtns();
     }
     else{
         msg.innerText = `Try Again, You can win!`;
         msgContainer.classList.remove("hide");
+       // msgContainer.classList.add("hide1");
     disableBtns();
     }
 };
