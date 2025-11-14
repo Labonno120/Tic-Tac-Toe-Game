@@ -21,9 +21,9 @@ document.getElementById("promptOk").addEventListener("click", () => {
 function startGame(user) {
     console.log("User entered:", user);
     // optional: play background music
-    let audio = new Audio("JS/happy_birthday.mp3"); // Add your birthday mp3 in JS folder
+    let audio = new Audio("JS/hbirthday.mp3"); // Add your birthday mp3 in JS folder
     audio.loop = true;
-    audio.volume = 0.2;
+    audio.volume = 0.1;
     audio.play();
 }
 
@@ -81,7 +81,8 @@ const showWinner = (winner) => {
     if(winner == user){
         msg.innerHTML = `🎉 Congratulations ${user}! 🎉<br>
         You got the cake! <br>
-        Happy Birthday to Sangeeta ❤️`;
+        Happy Birthday to Sangeeta!<br>
+        Heal, Become and Grow ❤️`;
         msgContainer.classList.remove("hide");
         gameArea.classList.add("hide1");
         celebration.classList.remove("hide");
